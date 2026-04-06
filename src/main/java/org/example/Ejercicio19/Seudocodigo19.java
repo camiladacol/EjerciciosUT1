@@ -28,4 +28,4 @@ public class Seudocodigo19
      */
 }
 
-//Por regla de la suma, orden lineal
+//Por regla de la suma, se cumple que este algoritmo tiene orden lineal

@@ -7,10 +7,10 @@ public class Main
         Empresa empresa1 = new Empresa();
         cargarArchivo (empresa1, "suc1.txt");
         System.out.println("Cantidad de sucursales:" + empresa1.cantidadSucursales());
-
+        empresa1.removerSucursal("Chicago"); //Eliminar Chicago de la lista
 
         Empresa empresa2 = new Empresa();
-        Empresa empresa3 = new Empresa();
+        cargarArchivo (empresa2, "suc2.txt");
 
     }
 

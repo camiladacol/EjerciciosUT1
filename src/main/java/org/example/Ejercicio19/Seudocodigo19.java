@@ -5,8 +5,8 @@ public class Seudocodigo19
     /*
     Función controlCorchetes (listaEntrada)
         crear pila vacia //Se crea la pila donde se van a guardar las llaves abiertas
-        para cada caracter x en listaEntrada hacer //Se recorre la lista
-            si x = "{" entonces //Si encuentra un {, lo guarda en la pila
+        para cada caracter x en listaEntrada hacer //Se recorre la lista //Orden N
+            si x = "{" entonces //Si encuentra un {, lo guarda en la pila //Orden 1
                 apilar (x)
             sino
                 si x "}" entonces //Se verifica si es una llave de cierre

@@ -13,19 +13,14 @@ public class Empresa
         sucursales.agregar(sucursal);
     }
 
-    public boolean sacarSucursal(String sucursal)
+    public boolean removerSucursal(String sucursal)
     {
-        return sucursales.sacar(sucursal);
+        return sucursales.remover(sucursal);
     }
 
     public boolean buscarSucursal(String sucursal)
     {
         return sucursales.buscar(sucursal);
-    }
-
-    public int cantidadSucursales(String sucursal)
-    {
-        return sucursales.cantidad();
     }
 
     public boolean vacio()

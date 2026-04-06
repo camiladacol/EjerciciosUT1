@@ -11,7 +11,6 @@ El peor caso posible es que nunca entre una llave de cierre y solo queden de abi
 
 En el caso de ir completando pares de llaves la memoria será poca, si son siempre abiertos se ocupará más.
 
-PRECONDICIONES
+(agregar pre y post condiciones)
 
-* La pila debe estar vacia
-* 
+revisar explicacion, ver ordenes

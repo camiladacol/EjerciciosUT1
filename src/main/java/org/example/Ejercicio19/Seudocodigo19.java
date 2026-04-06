@@ -27,3 +27,5 @@ public class Seudocodigo19
      fin
      */
 }
+
+//Por regla de la suma, orden lineal

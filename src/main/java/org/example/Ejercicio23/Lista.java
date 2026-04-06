@@ -1,6 +1,10 @@
 package org.example.Ejercicio23;
 
-public class Lista<T>
+import org.example.tda.TDALista;
+import java.util.Comparator;
+import java.util.function.Predicate;
+
+public class Lista<T> implements TDALista<T>
 {
     private Nodo<T> primeroEnLista;
 
@@ -8,37 +12,57 @@ public class Lista<T>
     {
         this.primeroEnLista = null;
     }
-
+    @Override
     public void agregar(T valor) // Agrega un elemento al final de la lista
     {
         Nodo<T> nuevo = new Nodo<>(valor);
-        if (primeroEnLista == null) {
+        if (primeroEnLista == null)
+        {
             primeroEnLista = nuevo;
         }
         else
         {
             Nodo<T> actual = primeroEnLista;
-            while (actual.getSiguiente() != null) {
+            while (actual.getSiguiente() != null)
+            {
                 actual = actual.getSiguiente();
             }
             actual.setSiguiente(nuevo);
         }
     }
 
-    public boolean sacar (T valor) // Saca un elemento y devuelve true si lo sacó
+    @Override
+    public void agregar(int index, T elem)
+    {
+        throw  new UnsupportedOperationException();
+    }
+
+    @Override
+    public boolean remover(T valor) // Saca un elemento y devuelve true si lo sacó
     {
         if  (primeroEnLista == null)
         {
             return false;
         }
-        if (primeroEnLista.getValor().equals(valor));
+        if (primeroEnLista.getValor().equals(valor))
         {
          primeroEnLista = primeroEnLista.getSiguiente();
          return true;
         }
+       Nodo<T> actual = primeroEnLista;
+        while (actual.getSiguiente() != null)
+        {
+            if (actual.getSiguiente().getValor().equals(valor))
+            {
+                actual.setSiguiente(actual.getSiguiente().getSiguiente());
+                return true;
+            }
+            actual = actual.getSiguiente();
+        }
+        return false;
     }
 
-    public boolean buscar (T valor) // Busca un elemento, si existe devuelve true
+    public boolean contiene (T valor) // Busca un elemento, si existe devuelve true
     {
         Nodo<T> actual = primeroEnLista;
         while (actual != null) {
@@ -51,7 +75,12 @@ public class Lista<T>
         return false;
     }
 
-    public int cantidad() // Devuelve la cantidad de elementos
+    public boolean buscar (T valor)
+    {
+        return  contiene(valor);
+    }
+
+    public int tamaño() // Devuelve la cantidad de elementos
     {
         int contador = 0;
         Nodo<T> actual = primeroEnLista;
@@ -67,6 +96,12 @@ public class Lista<T>
         return primeroEnLista == null;
     }
 
+    @Override
+    public void vaciar()
+    {
+        primeroEnLista = null;
+    }
+
     public void armarEnLista() // Lista todos los elementos, uno arriba del otro
     {
         Nodo<T> actual = primeroEnLista;
@@ -75,4 +110,33 @@ public class Lista<T>
             actual = actual.getSiguiente();
         }
     }
+
+    @Override
+    public int indiceDe(T elem) {
+        throw  new UnsupportedOperationException();
+    }
+
+    @Override
+    public T buscar(Predicate<T> criterio) {
+        throw  new UnsupportedOperationException();
+    }
+
+    @Override
+    public TDALista<T> ordenar(Comparator<T> comparator)
+    {
+        throw  new UnsupportedOperationException();
+    }
+
+    @Override
+    public T obtener(int index)
+    {
+        throw  new UnsupportedOperationException();
+    }
+
+    @Override
+    public T remover(int index)
+    {
+        throw  new UnsupportedOperationException();
+    }
+
 }

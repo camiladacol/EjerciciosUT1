@@ -33,4 +33,8 @@ public class Empresa
         sucursales.armarEnLista();
     }
 
+    public int cantidadSucursales()
+    {
+        return sucursales.tamaño();
+    }
 }

@@ -17,5 +17,5 @@ _Precondición:_
 _Postcondición:_
 * El conjunto resultado contiene todos los elementos de ambos conjuntos
 * No hay elementos repetidos
-* Ordenado
+* El resultaod queda ordenado
 

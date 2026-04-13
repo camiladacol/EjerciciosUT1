@@ -1,12 +1,11 @@
 package org.example.Ejercicio23;
-
 import org.example.tda.TDALista;
 import java.util.Comparator;
 import java.util.function.Predicate;
 
 public class Lista<T> implements TDALista<T>
 {
-    private Nodo<T> primeroEnLista;
+    private Nodo<T> primeroEnLista; //Constructor
 
     public Lista()
     {
@@ -62,10 +61,12 @@ public class Lista<T> implements TDALista<T>
         return false;
     }
 
+    @Override
     public boolean contiene (T valor) // Busca un elemento, si existe devuelve true
     {
         Nodo<T> actual = primeroEnLista;
-        while (actual != null) {
+        while (actual != null)
+        {
             if (actual.getValor().equals(valor))
             {
                 return true;
@@ -80,17 +81,19 @@ public class Lista<T> implements TDALista<T>
         return  contiene(valor);
     }
 
+    @Override
     public int tamaño() // Devuelve la cantidad de elementos
     {
         int contador = 0;
         Nodo<T> actual = primeroEnLista;
-        while (actual != null) {
+        while (actual != null)
+        {
             contador++;
             actual = actual.getSiguiente();
         }
         return contador;
     }
-
+    @Override
     public boolean esVacio() // Verifica si la lista esta vacía
     {
         return primeroEnLista == null;
@@ -112,8 +115,20 @@ public class Lista<T> implements TDALista<T>
     }
 
     @Override
-    public int indiceDe(T elem) {
-        throw  new UnsupportedOperationException();
+    public int indiceDe(T elem)
+    {
+        int indice = 0;
+        Nodo<T> actual = primeroEnLista;
+        while (actual != null)
+        {
+            if (actual.getValor().equals(elem))
+            {
+                return indice;
+            }
+            actual = actual.getSiguiente();
+            indice++;
+        }
+        return -1;
     }
 
     @Override

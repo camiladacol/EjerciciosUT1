@@ -1,0 +1,5 @@
+97801, El Quijote, Miguel de Cervantes, 500.0, 10
+97802, Harry Potter, J.K. Rowling, 850.0, 5
+97803, Cien Años de Soledad, Gabriel Garcia Marquez, 700.0, 8
+97804, 1984, George Orwell, 450.0, 12
+97805, El Principito, Antoine de Saint-Exupéry, 300.0, 20

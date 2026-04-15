@@ -1,6 +1,6 @@
-package org.example;
+package org.example.Ejercicio17y18;
 
-import org.example.Ejercicio17.aed.utils.Biblioteca;
+import org.example.Ejercicio17y18.utils.Biblioteca;
 
 public class Main {
     public static void main(String[] args) {

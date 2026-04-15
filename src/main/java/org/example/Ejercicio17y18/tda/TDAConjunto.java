@@ -1,4 +1,4 @@
-package org.example.Ejercicio17.aed.tda;
+package org.example.Ejercicio17y18.tda;
 
 /**
  * Define un Tipo de Dato Abstracto (TDA) Conjunto genérico.

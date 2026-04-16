@@ -1,0 +1,12 @@
+package org.example.Ejercicio20;
+
+public class Sucursal {
+    private String nombre;
+
+    public Sucursal (String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getNombre() { return nombre; }
+    public void setNombre(String nombre) { this.nombre = nombre; }
+}

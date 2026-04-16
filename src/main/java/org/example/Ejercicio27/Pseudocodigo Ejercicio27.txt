@@ -1,0 +1,55 @@
+ACORDARSE DE HACER ANALISIS DE TIEMPO DE EJECUCION
+
+1)
+
+Lenjuage Natural: El algoritmo recibe un elemento. Si la cola está vacía, se agrega el elemento como el primero de la cola. Si la cola está llena, se muestra el mensaje: "La cola está llena". Si no, se agrega el elemento al final de la cola, pasando a ser el nuevo último elemento.
+
+Postcondiciones:
+- Si la cola esta vacia se agrega el elemnto siendo este tanto el primero como el ultimo
+- Si la cola ya tiene elementos y no esta llena se agrega el elemnto al final de la cola pasando a ser el ultimo elemento de la cola
+- Si esta llena muestra un mensaje "la cola esta llena"
+
+Pseudocodigo:
+
+PoneEnCola(unElemento : tipoElemento)
+
+	Si contador == cola.length
+		Devolver false
+	Si No
+		ultimo.siguiente = unElemento
+		ultimo = unElemento
+		Devolver true
+	Fin Si
+Fin PoneEnCola
+	
+2)
+
+Lenjuage Natural: El usuario invoca la operación QuitarDeCola. Si la cola está vacía, se muestra el mensaje: "Cola vacía" y se devuelve null. Si no, la operación devuelve el primer elemento de la cola y lo elimina de la misma.
+
+Postcondiciones:
+
+- El algoritmo devuelve un valor según el estado de la cola:
+	- si la cola esta vacia se devuelve null 
+	- Si la cola contiene elementos esta devuelve el elemento eliminado.
+
+Pseudocodigo:
+
+QuitaDeCola()
+	
+	Si cola vacia
+		Mostrar cola vacia
+		devolver null
+	Si No
+		eliminado = primero
+		primero = primero.siguiente
+	Fin Si
+	Devolver eliminado
+Fin QuitaDeCola
+
+
+
+
+
+
+
+

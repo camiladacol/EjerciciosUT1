@@ -10,6 +10,5 @@ public class Main {
         int prestamosYDevoluciones = biblioteca.prestamos("prestamos.txt");
         System.out.println("Ejemplares prestados: " + prestamosYDevoluciones);
         biblioteca.ordenarLibros();
-
     }
 }
